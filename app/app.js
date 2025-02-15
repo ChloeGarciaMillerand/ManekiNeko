@@ -19,11 +19,14 @@ const objects =[
     }
 ];
 
-/*
-for (let object of objects) {
-    console.log(object.imageUrl);
-};
-*/
+// variable qui indique à quel index du tableau objet chercher la valeur:
+let indexObject = 0;
+
+// stocker la valeur de l'input dans numberUser
+let numberUser;
+
+// stocker les indices
+let hints = [];
 
 // comparer la valeur de l'input à celle de l'objet et passe à l'objet suivant
 function compareValues() {
@@ -48,16 +51,7 @@ function changeImage(){
     let currentImage = document.querySelector('.object-image');
     currentImage.src = objects[indexObject].imageUrl;
     currentImage.alt = objects[indexObject].alt;
-}
-
-// variable qui indique à quel index du tableau objet chercher la valeur:
-let indexObject = 0;
-
-// stocker la valeur de l'input dans numberUser
-let numberUser;
-
-// stocker les indices
-let hints = [];
+};
 
 // ajouter un écouteur d'événément à la soumission du formulaire
 const form = document.getElementById('game-form');
