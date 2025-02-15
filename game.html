@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
-        <title>Devinons le juste prix</title>
+        <title>Devinons le prix</title>
     </head>
     <body>
         <div class="image-container">
@@ -13,14 +13,14 @@
         </div>
 
         <div class="game-container">
-            <form>
+            <form id="game-form">
                 <label>
                     <div class="question">
                         A ton avis, quel est le prix de cet <span id="object-name">objet</span>?
                     </div>
                     <div class="answer">
                         <input type="text" name="object-price" id="price-input">
-                        <button type="submit">OK</button>
+                        <button type="submit" id="submit-button">OK</button>
                     </div>
                 </label>
                 
@@ -31,6 +31,6 @@
                 <p>Je crois que le prix est entre 0 et 15 €.</p>
             </div>
         </div>
-        
+    <script src="./app/app.js"></script>    
     </body>
     </html>
