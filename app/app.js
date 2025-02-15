@@ -40,6 +40,8 @@ form.addEventListener('submit', function(event) {
     // comparer la valeur de l'input à celle de l'objet
     if (numberUser === objects[indexObject].price) {
         console.log("trouvé!");
+        indexObject ++;
+        console.log(objects[indexObject].name);
     } else {
         console.log("perdu!");
     }
