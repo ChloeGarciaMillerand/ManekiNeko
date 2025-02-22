@@ -30,23 +30,31 @@ let hints = [];
 
 // comparer la valeur de l'input à celle de l'objet et passe à l'objet suivant
 function compareValues() {
+
+    const hintsContainer = document.getElementById('hints-list');
+    hintsContainer.innerHTML = '';
+
     if (numberUser === objects[indexObject].price) {
-        console.log("trouvé!");
         indexObject ++;
         console.log(objects[indexObject].name);
+        alert('Mais oui tu as raison! Voyons l\'objet suivant!')
         changeImage();
+        if (indexObject === 3) {
+            alert('Merci beaucoup pour ton aide, nous avons terminé!');
+        }
     } else {
-        console.log("perdu!");
-            if (numberUser > objects[indexObject].price) {
-                console.log("Hum, il me semble que c'est moins cher");
-                hints.push("Le prix est plus petit que " + numberUser + " €.");
-            } else if (numberUser < objects[indexObject].price) {
-                console.log("Hum, il me semble que c'est plus cher");
-                hints.push("Le prix est plus grand que " + numberUser + " €.");
-            };
+        changeHintsTitle();
+        if (numberUser > objects[indexObject].price) {
+            hints.push("Le prix est plus petit que " + numberUser + " €.");
+            printHints();
+        } else if (numberUser < objects[indexObject].price) {
+            hints.push("Le prix est plus grand que " + numberUser + " €.");
+            printHints();
+        };
     };
 };
 
+// changer l'image de l'objet
 function changeImage(){
     let currentImage = document.querySelector('.object-image');
     currentImage.src = objects[indexObject].imageUrl;
@@ -60,8 +68,29 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     let input = event.target.elements["object-price"];
     numberUser = parseInt(input.value);
-    console.log(numberUser);
 
     // comparer la valeur de l'input à celle de l'objet et passe à l'objet suivant
     compareValues();
+
+    // vider l'input
+    const priceInput = document.getElementById('price-input');
+    priceInput.value = "";
 });
+
+
+// afficher les indices
+function printHints() {
+    // crée un nouveau li qui contient l'indice
+    const hintsContainer = document.getElementById('hints-list');
+    for (hint of hints) {
+        const newHint = document.createElement('li');
+        newHint.textContent = hint;
+        hintsContainer.appendChild(newHint);
+    }
+}
+
+// change le texte initial "indice" en "indices"
+function changeHintsTitle () {
+    const hintsTitle = document.getElementById('hints-title');
+    hintsTitle.textContent = "Indices :";
+}
