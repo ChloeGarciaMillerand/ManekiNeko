@@ -2,9 +2,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --pearl-white: #DFDBD2;
+    --beige: #EEECE1;
+    --dark-beige: #BAAF8E;
+    --brown: #AD9182;
+    --chestnut: #583F2B;
+    --light-pink: #DAB3B3;
+    --old-pink: #D7B1AB;
+    --red: #B91E20;
+    --sage-green: #83955B;
+    --green: #566A38;
+    --dark-green: #2A3712;
+}
+
 body {
     display: flex;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--beige);
 }
 
 /* Partie gauche de l'écran */
@@ -42,11 +58,45 @@ label {
     flex-direction: column;
 }
 
+#hints-title {
+    font-weight: bold;
+}
+
 .question {
     display: block;
     width: 100%;
+    color: var(--chestnut);
+    font-weight: 600;
+
+}
+
+.answer {
+    display: flex;
+    align-items: center;
 }
 
 #price-input {
     margin: 1.5rem 0;
+    padding: 0.8rem;
+    border: 1px solid var(--chestnut);
+    border-radius: 10px 0 0 10px;
+}
+
+#submit-button {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--chestnut);
+    border-radius: 0 10px 10px 0;
+    background-color: var(--chestnut);
+    color: white;
+    font-weight: 600;
+}
+
+#submit-button:hover {
+    background-color: var(--beige);
+    color: var(--chestnut);
+}
+
+ul {
+    line-height: 1.5;
 }

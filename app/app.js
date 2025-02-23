@@ -1,18 +1,21 @@
-const objects =[
+const objects = [
     {
         name: "Teddy Bear",
+        text: "cet ours en peluche",
         price: 12,
         imageUrl: "./svg/bear.svg",
         alt: "ours en peluche"
     },
     {
         name: "Candy",
+        text: "cette sucette",
         price: 4,
         imageUrl: "./svg/candy.svg",
         alt: "bonbon"
     },
     {
         name: "Puzzle",
+        text: "ce puzzle",
         price: 9,
         imageUrl: "./svg/puzzle.svg",
         alt: "puzzle"
@@ -22,25 +25,22 @@ const objects =[
 // variable qui indique à quel index du tableau objet chercher la valeur:
 let indexObject = 0;
 
-// stocker la valeur de l'input dans numberUser
-let numberUser;
-
 // stocker les indices
 let hints = [];
 
 // comparer la valeur de l'input à celle de l'objet et passe à l'objet suivant
-function compareValues() {
-
+function compareValues(numberUser) {
     const hintsContainer = document.getElementById('hints-list');
     hintsContainer.innerHTML = '';
 
     if (numberUser === objects[indexObject].price) {
-        indexObject ++;
-        console.log(objects[indexObject].name);
+        indexObject++;
         alert('Mais oui tu as raison! Voyons l\'objet suivant!')
-        changeImage();
-        if (indexObject === 3) {
+        if (indexObject === objects.length) {
             alert('Merci beaucoup pour ton aide, nous avons terminé!');
+        } else {
+            console.log(objects[indexObject].name);
+            changeObject();
         }
     } else {
         changeHintsTitle();
@@ -54,23 +54,26 @@ function compareValues() {
     };
 };
 
-// changer l'image de l'objet
-function changeImage(){
+// changer les attributs de l'objet
+function changeObject() {
     let currentImage = document.querySelector('.object-image');
     currentImage.src = objects[indexObject].imageUrl;
     currentImage.alt = objects[indexObject].alt;
+
+    let currentText = document.getElementById('object-name');
+    currentText.innerText = objects[indexObject].text;
 };
 
 // ajouter un écouteur d'événément à la soumission du formulaire
 const form = document.getElementById('game-form');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     let input = event.target.elements["object-price"];
-    numberUser = parseInt(input.value);
+    let numberUser = parseInt(input.value);
 
     // comparer la valeur de l'input à celle de l'objet et passe à l'objet suivant
-    compareValues();
+    compareValues(numberUser);
 
     // vider l'input
     const priceInput = document.getElementById('price-input');
@@ -90,7 +93,7 @@ function printHints() {
 }
 
 // change le texte initial "indice" en "indices"
-function changeHintsTitle () {
+function changeHintsTitle() {
     const hintsTitle = document.getElementById('hints-title');
     hintsTitle.textContent = "Indices :";
 }
