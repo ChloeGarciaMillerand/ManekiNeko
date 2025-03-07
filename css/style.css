@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'RedditSans';
+    src: url('fonts/Reddit_Sans/RedditSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+  }
+
 * {
     box-sizing: border-box;
 }
 
 :root {
-    --pearl-white: #DFDBD2;
+    --pearl-white: #FFFBFA;
     --beige: #EEECE1;
     --dark-beige: #BAAF8E;
     --brown: #AD9182;
@@ -14,13 +21,14 @@
     --sage-green: #83955B;
     --green: #566A38;
     --dark-green: #2A3712;
+    --dark-grey: #1E1E1E;
 }
 
 body {
     display: flex;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--beige);
+    font-family: 'RedditSans', 'Roboto', sans-serif;
+    background-color: var(--pearl-white);
 }
 
 /* Partie gauche de l'écran */
@@ -60,13 +68,17 @@ label {
 
 #hints-title {
     font-weight: bold;
+    line-height: 2rem;
+    font-size: 1.15rem;
 }
 
 .question {
     display: block;
     width: 100%;
-    color: var(--chestnut);
+    color: var(--dark-grey);
     font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
 
 }
 
@@ -78,17 +90,18 @@ label {
 #price-input {
     margin: 1.5rem 0;
     padding: 0.8rem;
-    border: 1px solid var(--chestnut);
+    border: none;
     border-radius: 10px 0 0 10px;
+    background-color:  var(--beige);
 }
 
 #submit-button {
     margin: 0;
     padding: 0.8rem 1rem;
-    border: 1px solid var(--chestnut);
+    border: none;
     border-radius: 0 10px 10px 0;
-    background-color: var(--chestnut);
-    color: white;
+    background-color: var(--dark-beige);
+    color: var(--dark-grey);
     font-weight: 600;
 }
 
@@ -97,6 +110,6 @@ label {
     color: var(--chestnut);
 }
 
-ul {
-    line-height: 1.5;
+li {
+    line-height: 3rem;
 }
