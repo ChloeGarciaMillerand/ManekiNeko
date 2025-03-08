@@ -1,5 +1,7 @@
 # Maneki Neko
 
+![maneki neko](/svg/maneki_neko.svg)
+
 J'ai créé ce répertoire afin de m'exercer sur les différents languages que j'apprendrai durant ma formation chez O'Clock pour obtenir le titre de Concepteur Développeur d'Applications.
 
 J'ai imaginé construire au fur et à mesure de mon apprentissage une sorte de livre dont vous êtes le héros où l'on suivrait les aventures d'un chat (un maneki neko plus précisément!) à travers différents petits jeux.

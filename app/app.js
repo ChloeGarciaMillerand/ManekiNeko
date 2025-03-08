@@ -3,7 +3,7 @@ const objects = [
         name: "Teddy Bear",
         text: "cet ours en peluche",
         price: 12,
-        imageUrl: "./svg/bear.svg",
+        imageUrl: "./svg/teddy_bear.svg",
         alt: "ours en peluche"
     },
     {
@@ -14,11 +14,11 @@ const objects = [
         alt: "bonbon"
     },
     {
-        name: "Puzzle",
-        text: "ce puzzle",
+        name: "Cerf-volant",
+        text: "ce cerf-volant",
         price: 9,
-        imageUrl: "./svg/puzzle.svg",
-        alt: "puzzle"
+        imageUrl: "./svg/kite.svg",
+        alt: "cerf-volant"
     }
 ];
 

@@ -38,6 +38,13 @@ body {
     display: flex;
 }
 
+.image {
+    max-height: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .object-image {
     max-height: 50%;
     margin: auto;
@@ -47,6 +54,16 @@ body {
 
 /* Partie droite de l'écran */
 .game-container {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-content: center;
+}
+
+.story-container {
     width: 50%;
     height: 100vh;
     display: flex;
