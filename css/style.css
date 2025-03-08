@@ -242,29 +242,31 @@ li {
         width: 60%;
         height: 100vh;
     }
+}
 
-    @media (max-width:770px) {
-        body {
-            flex-direction: column;
-        }
-
-        .image-container {
-            width: 100%;
-            height: 100%;
-        }
-    
-        .image {
-            width: 70%;
-        }
-    
-        .story-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
+@media (max-width:770px) {
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
+    .image-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .image {
+        max-width: 80%;
+        height: auto;
+    }
+    
+    .story-container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
