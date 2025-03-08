@@ -5,6 +5,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Schoolbell';
+    src: url('fonts/Schoolbell/Schoolbell-Regular.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+  }
+
 * {
     box-sizing: border-box;
 }
@@ -32,12 +39,15 @@ body {
 }
 
 /* Partie gauche de l'écran */
+
+/* Commun */
 .image-container {
     width: 50%;
     height: 100vh;
     display: flex;
 }
 
+/* Index et boutique*/
 .image {
     max-height: 80%;
     margin: auto;
@@ -45,6 +55,7 @@ body {
     align-items: center;
 }
 
+/* Jeu boutique */
 .object-image {
     max-height: 50%;
     margin: auto;
@@ -53,17 +64,54 @@ body {
 }
 
 /* Partie droite de l'écran */
-.game-container {
+
+/* Index et boutique*/
+.story-container {
     width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 8%;
+    padding-left: 8%;
     justify-content: center;
 }
 
-.story-container {
+h1 {
+    font-family: 'Schoolbell', sans-serif;
+    font-size: 5rem;
+    margin: 1.8rem 0;
+    text-align: left;
+}
+
+.paragraph-story {
+    line-height: 2rem;
+    margin: 1.2rem 0;
+}
+
+.paragraph-story-dialog {
+    line-height: 2rem;
+    margin: 1.2rem 0;
+    font-style: italic;
+}
+
+.start-button {
+    border: none;
+    color: var(--dark-grey);
+    background-color: var(--dark-beige);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    margin-top: 1.8rem;
+}
+
+.start-button:hover {
+    background-color: var(--beige);
+    color: var(--chestnut);
+    cursor: pointer;
+}
+
+/* Jeu boutique */
+.game-container {
     width: 50%;
     height: 100vh;
     display: flex;
@@ -125,8 +173,98 @@ label {
 #submit-button:hover {
     background-color: var(--beige);
     color: var(--chestnut);
+    cursor: pointer;
 }
 
 li {
     line-height: 3rem;
+}
+
+/* responsive */
+
+@media (max-width:1410px) {
+    h1 {
+        font-size: 4.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .paragraph-story {
+        line-height: 1.5rem;
+        margin: 1.1rem 0;
+    }
+    
+    .paragraph-story-dialog {
+        line-height: 1.5rem;
+        margin: 1.1rem 0;
+    }
+
+    .start-button {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width:1160px) {
+    .story-container {
+        padding-left: 5%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin: 1.2rem 0;
+    }
+
+    .paragraph-story {
+        line-height: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .paragraph-story-dialog {
+        line-height: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .start-button {
+        margin-top: 1.2rem;
+    }
+}
+
+@media (max-width:970px) {
+    .image-container {
+        width: 40%;
+        height: 100vh;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .story-container {
+        width: 60%;
+        height: 100vh;
+    }
+
+    @media (max-width:770px) {
+        body {
+            flex-direction: column;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .image {
+            width: 70%;
+        }
+    
+        .story-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
 }
