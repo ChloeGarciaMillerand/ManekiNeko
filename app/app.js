@@ -34,10 +34,10 @@ function compareValues(numberUser) {
     hintsContainer.innerHTML = '';
 
     if (numberUser === objects[indexObject].price) {
+        openPopup('Mais oui tu as raison! Voyons l\'objet suivant.');
         indexObject++;
-        alert('Mais oui tu as raison! Voyons l\'objet suivant!')
         if (indexObject === objects.length) {
-            alert('Merci beaucoup pour ton aide, nous avons terminé!');
+            openPopup('Merci beaucoup pour ton aide, nous avons terminé!');
         } else {
             console.log(objects[indexObject].name);
             changeObject();
@@ -97,3 +97,23 @@ function changeHintsTitle() {
     const hintsTitle = document.getElementById('hints-title');
     hintsTitle.textContent = "Indices :";
 }
+
+//afficher la popup et la fermer
+
+    const popup = document.querySelector('.game-hidden-popup');
+    const closeButton = document.getElementById('close-pop-button');
+    const overlay = document.querySelector('.overlay');
+
+    function openPopup(message) {
+        popup.classList.replace('game-hidden-popup', 'game-popup');
+        overlay.style.display = 'block';
+        const texts = popup.getElementsByClassName('popup-text');
+        texts[0].innerText = message
+    };
+    
+    function closePopup() {
+        popup.classList.replace('game-popup', 'game-hidden-popup');
+        overlay.style.display = 'none';
+    }
+
+    closeButton.addEventListener('click', closePopup);
