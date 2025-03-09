@@ -107,7 +107,6 @@ h1 {
 .start-button:hover {
     background-color: var(--beige);
     color: var(--chestnut);
-    cursor: pointer;
 }
 
 /* Jeu boutique */
@@ -173,14 +172,52 @@ label {
 #submit-button:hover {
     background-color: var(--beige);
     color: var(--chestnut);
-    cursor: pointer;
 }
 
 li {
     line-height: 3rem;
 }
 
-/* responsive index et boutique*/
+/* pop up*/
+.game-hidden-popup {
+    position: absolute;
+    background-color: var(--beige);
+    padding: 2rem;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.game-popup {
+    position: absolute;
+    background-color: var(--beige);
+    padding: 2rem;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#close-pop-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.popup-text {
+    margin: 1rem;
+}
+
+.body-overlay {
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s easie-in-out;
+}
+
+/* responsive*/
 
 @media (max-width:1410px) {
     h1 {
