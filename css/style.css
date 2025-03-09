@@ -180,7 +180,7 @@ li {
     line-height: 3rem;
 }
 
-/* responsive */
+/* responsive index et boutique*/
 
 @media (max-width:1410px) {
     h1 {
@@ -242,6 +242,14 @@ li {
         width: 60%;
         height: 100vh;
     }
+
+    .game-container {
+        width: 60%;
+    }
+
+    .object-image {
+        width: 80%;
+    }
 }
 
 @media (max-width:770px) {
@@ -268,5 +276,23 @@ li {
 
     h1 {
         font-size: 2rem;
+    }
+
+    .object-image {
+        margin: 5% auto;
+        width: 50%;
+    }
+
+    .game-container {
+        margin: 5% 0;
+        width: 100%;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+    }
+
+    .answer {
+        margin: auto;
     }
 }
