@@ -1,6 +1,8 @@
-# Maneki Neko
+# Maneki Neko - Jeu pour enfant
 
-![maneki neko](/svg/maneki_neko.svg)
+![home](/screenshots/maneki_neko_home.png)
+
+## 🐱 Le projet
 
 J'ai créé ce répertoire afin de m'exercer sur les différents languages que j'apprendrai durant ma formation chez O'Clock pour obtenir le titre de Concepteur Développeur d'Applications.
 
@@ -8,6 +10,19 @@ Maneki Neko me permet d'intégrer toutes mes compétences: le développement web
 
 J'ai imaginé construire au fur et à mesure de mon apprentissage une sorte de livre dont vous êtes le héros où l'on suivrait les aventures d'un chat (un maneki neko plus précisément!) à travers différents petits jeux.
 
-Je viens de terminer le premier jeu tout est en encore en chantier! Ce jeu a été développé en vanilla js, j'intégrerai au fil des semaines mes autres apprentissages.
+Je viens de terminer le premier jeu tout est en encore en chantier! Ce jeu a été développé en vanilla js, j'intégrerai au fil des semaines mes autres apprentissages. Voici un aperçu du jeu:
+
+![home](/screenshots/maneki_neko_game.png)
 
 Je ne pense pas que je recoderai plus tard les premiers jeux, l'idée étant aussi de voir mon évolution durant la formation. Mais rien n'est figé, et ce sera peut-être amené à changer!
+
+## 🛠️ Technologies utilisées
+
+- HTML
+- CSS
+- JavaScript
+
+## 🚀 Lancer l'application
+
+Rien de plus simple, cliquez ici:  
+https://chloegarciamillerand.github.io/ManekiNeko/
